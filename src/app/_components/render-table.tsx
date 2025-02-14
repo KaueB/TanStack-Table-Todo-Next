@@ -4,6 +4,12 @@ import { ColumnDef } from "@tanstack/react-table";
 
 export const columns: ColumnDef<task>[] = [
   {
+    id: "index",
+    accessorKey: "index",
+    header: "#",
+    cell: ({ row }) => <div>{row.index + 1}</div>,
+  },
+  {
     id: "id",
     accessorKey: "id",
     header: "ID",
